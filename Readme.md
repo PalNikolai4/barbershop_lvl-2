@@ -1,6 +1,6 @@
 # Личный проект Барбершоп «Бородинский»
 
-* Студент: [PalNikolai4](https://github.com/PalNikolai4).
+* Студент: `[PalNikolai4](https://github.com/PalNikolai4)`.
 * Наставник: [Вся Академия](https://htmlacademy.ru/).
 
 ---
