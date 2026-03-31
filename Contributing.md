@@ -21,10 +21,10 @@ git pull academy master
 git push
 ```
 
-¹ В `academy` должна быть ссылка на репозиторий Академии. Если его там нет, добавьте:
+¹ В `academy` должна быть ссылка на репозиторий Академии. Если его там нет, добавьте.
 
 ```
-git remote add academy git@github.com:htmlacademy-adaptive/1807715-cat-energy-24.git
+git remote add academy git@github.com:htmlacademy-adaptive/projectName.git
 ```
 
 Когда вы обновили `master`, создайте ветку для нового задания:
