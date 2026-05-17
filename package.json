@@ -4,10 +4,10 @@
   "description": "Личный проект от HTML Academy",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 8080",
     "build": "vite build",
     "preview": "vite preview --port 8080",
-    "lint:styles": "stylelint \"source/sass**/*.scss\"",
+    "lint:styles": "stylelint \"source/sass/**/*.scss\"",
     "lint:styles:fix": "stylelint \"source/sass/**/*.scss\" --fix",
     "lint": "npm run lint:styles"
   },
