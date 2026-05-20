@@ -7,13 +7,48 @@
 </head>
 <body class="page__body">
     <header class="page-header">
-        <div class="page-header__wrapper">
-            <a class="page-header__logo" href="img/logo-mobile.svg">
-                <img src="img/logo-mobile.svg" alt="Логотип барбершопа Бородинский">
-            </a>
-        </div>
+        <a class="page-header__logo">
+            <img src="./img/logo-mobile.svg" width="226" height="30" alt="Логотип барбершопа Бородинский">
+        </a>
+        <nav class="main-nav">
+            <button class="main-nav__toggle" type="button">
+                <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <div class="main-nav__wrapper">
+                <ul class="main-nav__list site-list">
+                    <li class="site-list__item site-list__item--active">
+                        <a>Главная</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="#">Наши работы</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="#">Записаться</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="#">Контакты</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a href="#">HTMLAcademy</a>
+                    </li>
+                </ul>
+                <div class="main-nav__list user-list">
+                        <a class="user-list__link" href="">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="1">
+                                    <path d="M7 2H14V14H7V16H16V0H7V2Z" fill="black" />
+                                    <path d="M7 9H0V7H7V4L11 8L7 12V9Z" fill="black" />
+                                </g>
+                            </svg>
+                            Войти
+                        </a>
+                </div>
+            </div>
+        </nav>
     </header>
-<h1 class="helpMe">help me</h1>
+
+    <main class="page-main"></main>
+    <footer class="page-footer"></footer>
     <script type="module" src="js/main.js"></script>
 </body>
 </html>
