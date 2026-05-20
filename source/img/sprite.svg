@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+    <symbol id="login" viewBox="0 0 16 16">
+        <g>
+            <path d="M7 2H14V14H7V16H16V0H7V2Z" fill="currentColor"/>
+            <path d="M7 9H0V7H7V4L11 8L7 12V9Z" fill="currentColor"/>
+        </g>
+    </symbol>
+</svg>
