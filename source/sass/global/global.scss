@@ -6,12 +6,24 @@
   padding: 0;
   border: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
   overflow: hidden;
+  clip-path: inset(100%);
+  /* stylelint-disable-next-line property-no-deprecated */
+  clip: rect(0 0 0 0);
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+
+// hz kuda
+.icon-login {
+  color: #000000;
+  opacity: 0.3;
+}
+
+.logo-mobile {
+  color: #000000;
 }

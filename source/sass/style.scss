@@ -1,9 +1,4 @@
-@import url("global/fonts.scss");
-@import url("global/global.scss");
-@import url("global/page.scss");
-@import url("global/variables.scss");
-
-.icon-login {
-    color: #000000;
-    opacity: 0.3;
-}
+@import "global/fonts";
+@import "global/global";
+@import "global/page";
+@import "global/variables";
