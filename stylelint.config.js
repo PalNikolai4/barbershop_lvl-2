@@ -8,6 +8,7 @@ export default {
       {
         "message": "Expected class selector to follow BEM convention"
       }
-    ]
+    ],
+    "scss/load-no-partial-leading-underscore": null,
   }
 }
