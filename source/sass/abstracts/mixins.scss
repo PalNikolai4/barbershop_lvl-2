@@ -8,3 +8,8 @@
   text-decoration: none;
   color: $color;
 }
+
+@mixin container($padding:0) {
+  margin: 0 auto;
+  padding: $padding;
+}

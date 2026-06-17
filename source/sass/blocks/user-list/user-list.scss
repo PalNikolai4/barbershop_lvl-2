@@ -1,0 +1,11 @@
+@use "../../abstracts/index" as abs;
+
+.user-list {
+  @media (min-width: abs.$tablet-width) {
+    width: 80px;
+  }
+
+  @media (min-width: abs.$desktop-width) {
+    min-width: 80px;
+  }
+}

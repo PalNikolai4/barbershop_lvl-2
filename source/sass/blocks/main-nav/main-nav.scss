@@ -1,5 +1,24 @@
 @use "../../abstracts/index" as abs;
 
+.main-nav__toggle {
+  @media (min-width: abs.$tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav__wrapper {
+  @media (min-width: abs.$tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 640px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: abs.$desktop-width) {
+    width: 960px;
+  }
+}
+
 .main-nav__list {
   @include abs.reset-list;
 

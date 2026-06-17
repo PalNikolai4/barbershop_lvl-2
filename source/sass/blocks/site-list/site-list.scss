@@ -1,0 +1,10 @@
+@use "../../abstracts/index" as abs;
+
+.site-list {
+  @media (min-width: abs.$tablet-width) {
+    width: 560px;
+  }
+  @media (min-width: abs.$tablet-width) {
+    width: 780px;
+  }
+}
