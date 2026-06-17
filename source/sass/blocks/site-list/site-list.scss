@@ -1,10 +1,11 @@
 @use "../../abstracts/index" as abs;
 
 .site-list {
-  @media (min-width: abs.$tablet-width) {
+  @media (width >= abs.$tablet-width) {
     width: 560px;
   }
-  @media (min-width: abs.$tablet-width) {
-    width: 780px;
+  
+  @media (width >= abs.$desktop-width) {
+    width: 800px;
   }
 }
