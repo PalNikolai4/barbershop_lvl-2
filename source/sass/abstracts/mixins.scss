@@ -1,12 +1,10 @@
 @mixin reset-list {
   margin: 0;
   padding: 0;
-  & li {
-    list-style: none;
-  }
+  list-style: none;
 }
 
-@mixin reset-link($color: #ffffff) {
+@mixin reset-link($color: #000000) {
   text-decoration: none;
   color: $color;
 }

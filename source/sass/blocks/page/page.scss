@@ -13,13 +13,14 @@
   color: #ffffff;
 }
 
-.page__header-logo {
+.page__logo {
   height: 85px;
 
   @media (min-width: abs.$tablet-width) {
     order: 2;
     height: 100px;
   }
+
   @media (min-width: abs.$desktop-width) {
     height: 153px;
   }
