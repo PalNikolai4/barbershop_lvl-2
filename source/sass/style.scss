@@ -1,7 +1,8 @@
 @use "global/fonts";
 @use "global/global";
-@use "global/variables";
+@use "blocks/logo/logo";
+@use "blocks/icon/icon";
+
+
 @use "blocks/page/page";
-@use "blocks/page/_body";
-@use "blocks/page-header/page-header";
-@use "blocks/page-header/_logo";
+@use "blocks/main-nav/main-nav";

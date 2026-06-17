@@ -1,5 +1,35 @@
+@use "../../abstracts/index.scss" as abs;
+
 .page {
   font-family: "PT Sans Narrow", Arial, sans-serif;
   font-size: 18px;
   line-height: 1;
+}
+
+.page__header {
+  display: flex;
+  flex-direction: column;
+  background-color: #242424;
+  color: #ffffff;
+}
+
+.page__header-logo {
+  height: 85px;
+
+  @media (min-width: abs.$tablet-width) {
+    order: 2;
+    height: 100px;
+  }
+  @media (min-width: abs.$desktop-width) {
+    height: 153px;
+  }
+}
+
+.page__body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  margin: 0;
+  background-color: abs.$lightgrey;
+  color: #000000;
 }
