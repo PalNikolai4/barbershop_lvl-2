@@ -1,0 +1,70 @@
+@use "../../abstracts/index" as abs;
+
+.stats {
+  background-color: #242424;
+  color: #ffffff;
+}
+
+.stats__wrapper {
+  @media (width >= abs.$tablet-width) {
+    padding: 0 64px;
+  }
+
+  @media (width >= abs.$desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    max-width: 960px;
+    margin: auto;
+    padding: 0;
+  }
+}
+
+.stats__header {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.stats__slogan {
+  margin: 0;
+  margin-bottom: 13px;
+  font-size: 30px;
+  font-weight: bold;
+
+  @media (width <= abs.$mobile-width) {
+    text-transform: uppercase;
+  }
+
+}
+
+.stats__intro {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.stats__legend {
+  margin: 0;
+  font-size: 20px;
+  opacity: 0.3;
+
+  &--top {
+    @media (width <=abs.$mobile-width) {
+      display: none;
+    }
+
+    @media (width >= abs.$tablet-width) {
+      margin-top: 24px;
+    }
+
+    @media (width >= abs.$desktop-width) {
+      margin-top: 34px;
+      line-height: 1.35;
+    }
+  }
+
+  &--bottom {
+    @media (width >= abs.$tablet-width) {
+      display: none;
+    }
+  }
+}
