@@ -11,18 +11,38 @@
   flex-direction: column;
   background-color: #242424;
   color: #ffffff;
+
+  @media (width > abs.$mobile-width) {
+    background-color: #000000;
+  }
 }
 
 .page__logo {
   height: 85px;
+  text-align: center;
 
-  @media (width >= abs.$tablet-width) {
+  @media (width > abs.$mobile-width) {
     order: 2;
-    height: 100px;
+    height: 400px;
+    background-image: url("../../../img/back-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% -9px;
+    background-size: cover;
   }
 
   @media (width >= abs.$desktop-width) {
-    height: 153px;
+    height: 648px;
+    background-image: url("../../../img/back-desktop.jpg");
+    background-position: center;
+  }
+}
+
+.page__logo-img {
+  @media (width > abs.$mobile-width) {
+    margin-top: 39px;
+  }
+  @media (width >= abs.$desktop-width) {
+    margin-top: 54px;
   }
 }
 
