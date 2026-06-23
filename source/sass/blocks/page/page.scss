@@ -24,6 +24,7 @@
   @media (width > abs.$mobile-width) {
     order: 2;
     height: 400px;
+    background-color: #000000;
     background-image: url("../../../img/back-tablet.jpg");
     background-repeat: no-repeat;
     background-position: 50% -9px;
@@ -38,11 +39,17 @@
 }
 
 .page__logo-img {
+  width: 226px;
+  height: 30px;
+
   @media (width > abs.$mobile-width) {
     margin-top: 39px;
+    width: 370px;
+    height: 100px;
   }
   @media (width >= abs.$desktop-width) {
     margin-top: 54px;
+    height: 153px;
   }
 }
 
