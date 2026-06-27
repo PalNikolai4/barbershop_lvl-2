@@ -3,8 +3,17 @@
 .main-nav {
   position: relative;
   width: auto;
-  min-height: 51px;
-  background-color: #826550;
+  min-height: 50px;
+
+  @media (width < abs.$tablet-width) {
+    background-color: #826550;
+  }
+}
+
+.main-nav--nojs.main-nav {
+  @media (width < abs.$tablet-width) {
+    background-color: transparent;
+  }
 }
 
 .main-nav__toggle {
@@ -78,6 +87,10 @@
   background-color: rgba(255, 255, 255, 0.3);
 }
 
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
 .main-nav__wrapper {
   @media (width >= abs.$tablet-width) {
     display: flex;
@@ -88,6 +101,36 @@
 
   @media (width >= abs.$desktop-width) {
     width: 960px;
+  }
+}
+
+.main-nav--opened .main-nav__wrapper {
+  @media (width < abs.$tablet-width) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 70px;
+    z-index: 4;
+  }
+}
+
+.main-nav--opened .main-nav__wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 7px;
+  height: 100%;
+  box-shadow: inset 4px 0 7px -2px rgba($color: #000000, $alpha: 0.4);
+}
+
+.main-nav--nojs .main-nav__wrapper {
+  @media (width < abs.$tablet-width) {
+    position: relative;
+    top: auto;
+    left: auto;
+    z-index: auto;
   }
 }
 

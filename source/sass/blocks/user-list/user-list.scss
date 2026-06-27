@@ -6,15 +6,34 @@
   }
 }
 
+.main-nav--closed .user-list {
+  @media (width < abs.$tablet-width) {
+    display: none;
+  }
+}
+
 .user-list__link {
   position: relative;
   display: block;
-  padding: 17px 20px 17px 49px;
+  padding: 13px 20px 13px 49px;
   line-height: 24px;
   color: #ffffff;
 
-  &:hover {
-    background-color: rgba($color: #ffffff, $alpha: 0.3);
+  @media (width >= abs.$tablet-width) {
+    &:hover {
+      color: #826550;
+    }
+
+    &:active {
+      color: #ffffff;
+      opacity: 0.3;
+    }
+  }
+}
+
+.main-nav--opened .user-list__link {
+  @media (width < abs.$tablet-width) {
+    background-color: #6a4d38;
   }
 }
 
@@ -27,3 +46,33 @@
   color: #ffffff;
   opacity: 0.3;
 }
+
+.user-list__link:hover .user-list__icon-login {
+  @media (width >= abs.$tablet-width) {
+    color: #826550;
+    opacity: 1;
+  }
+}
+
+.user-list__link:active .user-list__icon-login {
+  @media (width >= abs.$tablet-width) {
+    color: #ffffff;
+    opacity: 0.3;
+  }
+}
+/*
+- меняются стили у .user-list__link на мобильной версии когда открыто меню .main-nav--opened
+- меняются стили у .user-list__link когда не работает js
+- меняются стили у .user-list__icon-login при наведении и нажатии на .user-list__link:hover на больших экранах
+
+- меняются стили у .site-list__item a при наведении и нажатии на .site-list__item a на всех экранах
+
+- заданы отступы .main-nav--closed .site-list__item--active a для мобильных экранов
+- задан background-color .main-nav--opened .site-list__item--active a для мобильных экранов
+
+- .main-nav--nojs.main-nav задан background-color для мобильных экранов
+
+- заданы стили и позиционирование .main-nav--opened .main-nav__wrapper для мобильных экранов
+- заданы стили и позиционирование .main-nav--opened .main-nav__wrapper::before для мобильных экранов
+- заданы стили и позиционирование .main-nav--nojs .main-nav__wrapper для мобильных экранов
+*/
