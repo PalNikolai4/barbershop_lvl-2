@@ -96,9 +96,5 @@
 
   & a {
     @include abs.reset-link(#ffffff);
-
-    font-weight: bold;
-    line-height: 24px;
-    text-transform: uppercase;
   }
 }
