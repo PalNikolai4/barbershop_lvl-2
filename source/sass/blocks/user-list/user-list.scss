@@ -12,6 +12,12 @@
   }
 }
 
+.main-nav--nojs .user-list {
+  @media (width < abs.$tablet-width) {
+    display: block;
+  }
+}
+
 .user-list__link {
   position: relative;
   display: block;
@@ -19,7 +25,15 @@
   line-height: 24px;
   color: #ffffff;
 
-  @media (width >= abs.$tablet-width) {
+  @media (width < abs.$tablet-width) {
+    background-color: #6a4d38;
+
+    &:active {
+      color: rgba($color: #ffffff, $alpha: 0.3);
+    }
+  }
+
+  @media (width > abs.$mobile-width) {
     &:hover {
       color: #826550;
     }
@@ -31,20 +45,17 @@
   }
 }
 
-.main-nav--opened .user-list__link {
-  @media (width < abs.$tablet-width) {
-    background-color: #6a4d38;
-  }
-}
-
 .user-list__icon-login {
   position: absolute;
-  top: 21px;
-  left: 19px;
   width: 16px;
   height: 16px;
   color: #ffffff;
   opacity: 0.3;
+
+  @media (width < abs.$tablet-width) {
+    top: 17px;
+    left: 19px;
+  }
 }
 
 .user-list__link:hover .user-list__icon-login {
@@ -60,19 +71,3 @@
     opacity: 0.3;
   }
 }
-/*
-- меняются стили у .user-list__link на мобильной версии когда открыто меню .main-nav--opened
-- меняются стили у .user-list__link когда не работает js
-- меняются стили у .user-list__icon-login при наведении и нажатии на .user-list__link:hover на больших экранах
-
-- меняются стили у .site-list__item a при наведении и нажатии на .site-list__item a на всех экранах
-
-- заданы отступы .main-nav--closed .site-list__item--active a для мобильных экранов
-- задан background-color .main-nav--opened .site-list__item--active a для мобильных экранов
-
-- .main-nav--nojs.main-nav задан background-color для мобильных экранов
-
-- заданы стили и позиционирование .main-nav--opened .main-nav__wrapper для мобильных экранов
-- заданы стили и позиционирование .main-nav--opened .main-nav__wrapper::before для мобильных экранов
-- заданы стили и позиционирование .main-nav--nojs .main-nav__wrapper для мобильных экранов
-*/

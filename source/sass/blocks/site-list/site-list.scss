@@ -1,11 +1,11 @@
 @use "../../abstracts/index" as abs;
 
 .site-list {
-  @media (width >=abs.$tablet-width) {
+  @media (width >abs.$mobile-width) {
     width: 560px;
   }
 
-  @media (width >=abs.$desktop-width) {
+  @media (width >abs.$tablet-width) {
     width: 800px;
   }
 }
@@ -13,11 +13,25 @@
 .main-nav--closed .site-list__item {
   @media (width < abs.$tablet-width) {
     display: none;
+  }
+}
 
-    &--active {
-      display: block;
-      text-align: center;
-    }
+.main-nav--nojs .site-list__item {
+  @media (width < abs.$tablet-width) {
+    display: block;
+  }
+}
+
+.main-nav--closed .site-list__item--active {
+  @media (width < abs.$tablet-width) {
+    display: block;
+    text-align: center;
+  }
+}
+
+.main-nav--nojs .site-list__item--active {
+  @media (width < abs.$tablet-width) {
+    text-align: left;
   }
 }
 
@@ -43,7 +57,7 @@
     }
   }
 
-  @media (width >= abs.$tablet-width) {
+  @media (width >abs.$mobile-width) {
     &:hover {
       color: #826550;
     }
@@ -64,6 +78,13 @@
 
 .main-nav--opened .site-list__item--active a {
   @media (width < abs.$tablet-width) {
+    background-color: #6A4D38;
+  }
+}
+
+.main-nav--nojs .site-list__item--active a {
+  @media (width < abs.$tablet-width) {
+    padding-left: 21px;
     background-color: #6A4D38;
   }
 }
