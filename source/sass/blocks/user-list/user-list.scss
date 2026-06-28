@@ -1,7 +1,7 @@
 @use "../../abstracts/index" as abs;
 
 .user-list {
-  @media (width >=abs.$tablet-width) {
+  @media (width > abs.$mobile-width) {
     min-width: 80px;
   }
 }
@@ -29,7 +29,7 @@
     background-color: #6a4d38;
 
     &:active {
-      color: rgba($color: #ffffff, $alpha: 0.3);
+      color: rgb(255, 255, 255 / 30%);
     }
   }
 
@@ -59,14 +59,14 @@
 }
 
 .user-list__link:hover .user-list__icon-login {
-  @media (width >= abs.$tablet-width) {
+  @media (width > abs.$mobile-width) {
     color: #826550;
     opacity: 1;
   }
 }
 
 .user-list__link:active .user-list__icon-login {
-  @media (width >= abs.$tablet-width) {
+  @media (width > abs.$mobile-width) {
     color: #ffffff;
     opacity: 0.3;
   }

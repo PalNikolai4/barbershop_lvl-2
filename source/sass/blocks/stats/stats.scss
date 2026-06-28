@@ -6,7 +6,7 @@
 }
 
 .stats__wrapper {
-  @media (width >= abs.$tablet-width) {
+  @media (width > abs.$mobile-width) {
     padding: 0 64px;
   }
 
@@ -30,7 +30,7 @@
   font-size: 30px;
   font-weight: bold;
 
-  @media (width <= abs.$mobile-width) {
+  @media (width <= abs.$tablet-width) {
     text-transform: uppercase;
   }
 
@@ -48,11 +48,11 @@
   opacity: 0.3;
 
   &--top {
-    @media (width <=abs.$mobile-width) {
+    @media (width < abs.$tablet-width) {
       display: none;
     }
 
-    @media (width >= abs.$tablet-width) {
+    @media (width > abs.$mobile-width) {
       margin-top: 24px;
     }
 
@@ -63,7 +63,7 @@
   }
 
   &--bottom {
-    @media (width >= abs.$tablet-width) {
+    @media (width > abs.$mobile-width) {
       display: none;
     }
   }
