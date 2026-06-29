@@ -56,7 +56,7 @@
 
     &:active {
       background-color: #6A4D38;
-      color: rgb(255, 255, 255 / 30%);
+      color: rgb(255 255 255 / 30%);
     }
   }
 
@@ -69,6 +69,12 @@
       color: #ffffff;
       opacity: 0.3;
     }
+  }
+}
+
+.site-list__item--active:hover a {
+  @media (width > abs.$tablet-width) {
+    color: #ffffff;
   }
 }
 

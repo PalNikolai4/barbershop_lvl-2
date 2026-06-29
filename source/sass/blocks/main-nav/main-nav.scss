@@ -51,10 +51,10 @@
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
-  background-color: rgb(255, 255, 255 / 30%);
+  background-color: rgb(255 255 255 / 30%);
   box-shadow:
-    0 8px 0 0 rgb(255, 255, 255 / 30%),
-    0 16px 0 0 rgb(255, 255, 255 / 30%);
+    0 8px 0 0 rgb(255 255 255 / 30%),
+    0 16px 0 0 rgb(255 255 255 / 30%);
 }
 
 .main-nav--opened .main-nav__toggle {
@@ -82,7 +82,7 @@
 
 .main-nav--opened .main-nav__toggle:active::before,
 .main-nav--opened .main-nav__toggle:active::after {
-  background-color: rgb(255, 255, 255 / 30%);
+  background-color: rgb(255 255 255 / 30%);
 }
 
 .main-nav--nojs .main-nav__toggle {
@@ -120,7 +120,7 @@
   z-index: 2;
   width: 7px;
   height: 100%;
-  box-shadow: inset 4px 0 7px -2px rgb(255, 255, 255 / 30%);
+  box-shadow: inset 4px 0 7px -2px rgb(255 255 255 / 30%);
 }
 
 .main-nav--nojs .main-nav__wrapper {
