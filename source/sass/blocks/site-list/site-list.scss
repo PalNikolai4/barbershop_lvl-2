@@ -40,12 +40,12 @@
 
 .site-list__item a {
   display: block;
-  padding: 12px 21px;
   font-weight: bold;
   line-height: 24px;
   text-transform: uppercase;
 
   @media (width < abs.$tablet-width) {
+    padding: 12px 21px;
     border-top: 1px solid #886e5b;
     border-bottom: 1px solid #71543F;
     background-color: #826550;
@@ -61,6 +61,8 @@
   }
 
   @media (width > abs.$mobile-width) {
+    padding: 24px 0;
+
     &:hover {
       color: #826550;
     }
@@ -68,6 +70,22 @@
     &:active {
       color: #ffffff;
       opacity: 0.3;
+    }
+  }
+}
+
+.site-list__item--active a {
+  @media (width > abs.$mobile-width) {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background-color: #826550;
     }
   }
 }

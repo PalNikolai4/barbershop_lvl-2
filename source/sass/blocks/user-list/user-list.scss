@@ -34,6 +34,10 @@
   }
 
   @media (width > abs.$mobile-width) {
+    display: block;
+    height: 72px;
+    padding: 0;
+
     &:hover {
       color: #826550;
     }
@@ -51,10 +55,15 @@
   height: 16px;
   color: #ffffff;
   opacity: 0.3;
+  top: 50%;
+  transform: translateY(-50%);
 
   @media (width < abs.$tablet-width) {
-    top: 17px;
     left: 19px;
+  }
+
+  @media (width > abs.$mobile-width) {
+    left: 31px;
   }
 }
 
@@ -69,5 +78,18 @@
   @media (width > abs.$mobile-width) {
     color: #ffffff;
     opacity: 0.3;
+  }
+}
+
+.user-list__link span {
+  @media (width > abs.$mobile-width) {
+    // display: none;
+    position: absolute;
+    opacity: 0;
+  }
+
+  @media (width >=abs.$desktop-width) {
+    position: relative;
+    opacity: 1;
   }
 }
