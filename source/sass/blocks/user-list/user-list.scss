@@ -2,7 +2,12 @@
 
 .user-list {
   @media (width > abs.$mobile-width) {
-    min-width: 80px;
+    width: 60px;
+  }
+
+  @media (width >= abs.$desktop-width) {
+    width: auto;
+    max-width: 160px;
   }
 }
 
@@ -20,12 +25,14 @@
 
 .user-list__link {
   position: relative;
+  width: auto;
+  height: auto;
   display: block;
-  padding: 13px 20px 13px 49px;
   line-height: 24px;
   color: #ffffff;
 
   @media (width < abs.$tablet-width) {
+    padding: 13px 20px 13px 49px;
     background-color: #6a4d38;
 
     &:active {
@@ -34,17 +41,30 @@
   }
 
   @media (width > abs.$mobile-width) {
-    display: block;
-    height: 72px;
-    padding: 0;
+    padding: 36px 0;
 
     &:hover {
       color: #826550;
     }
 
     &:active {
-      color: #ffffff;
-      opacity: 0.3;
+      color: rgb(255 255 255 / 30%);
+    }
+  }
+
+  @media (width >= abs.$desktop-width) {
+    padding: 24px 30px 24px 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
+
+    &:hover {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    &:active {
+      color: rgb(0 0 0 / 30%);
     }
   }
 }
@@ -53,8 +73,7 @@
   position: absolute;
   width: 16px;
   height: 16px;
-  color: #ffffff;
-  opacity: 0.3;
+  color: rgb(255 255 255 / 30%);
   top: 50%;
   transform: translateY(-50%);
 
@@ -63,33 +82,38 @@
   }
 
   @media (width > abs.$mobile-width) {
-    left: 31px;
+    left: 22px;
+  }
+
+  @media (width >= abs.$desktop-width) {
+    left: 19px;
   }
 }
 
 .user-list__link:hover .user-list__icon-login {
   @media (width > abs.$mobile-width) {
     color: #826550;
-    opacity: 1;
+  }
+
+  @media (width >= abs.$desktop-width) {
+    color: rgb(0 0 0 / 30%);
   }
 }
 
 .user-list__link:active .user-list__icon-login {
   @media (width > abs.$mobile-width) {
-    color: #ffffff;
-    opacity: 0.3;
+    color: rgb(0 0 0 / 10%);
   }
 }
 
 .user-list__link span {
   @media (width > abs.$mobile-width) {
-    // display: none;
     position: absolute;
     opacity: 0;
   }
 
-  @media (width >=abs.$desktop-width) {
-    position: relative;
+  @media (width >= abs.$desktop-width) {
+    position: static;
     opacity: 1;
   }
 }

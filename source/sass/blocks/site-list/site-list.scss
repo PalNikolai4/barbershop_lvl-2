@@ -8,8 +8,9 @@
     width: 560px;
   }
 
-  @media (width >= abs.$desktop-width) {
+  @media (width >=abs.$desktop-width) {
     width: 800px;
+    column-gap: 1px;
   }
 }
 
@@ -68,8 +69,19 @@
     }
 
     &:active {
-      color: #ffffff;
-      opacity: 0.3;
+      color: rgb(255 255 255 / 30%);
+    }
+  }
+
+  @media (width >=abs.$desktop-width) {
+    padding: 30px;
+    &:hover {
+      color: #000000;
+      background-color: #ffffff;
+    }
+
+    &:active {
+      color: rgb(0 0 0 / 30%);
     }
   }
 }
@@ -88,11 +100,19 @@
       background-color: #826550;
     }
   }
-}
 
-.site-list__item--active:hover a {
-  @media (width > abs.$tablet-width) {
-    color: #ffffff;
+  &:hover {
+    @media (width > abs.$mobile-width) {
+      color: #ffffff;
+    }
+
+    @media (width >=abs.$desktop-width) {
+      color: #000000;
+
+      &::before {
+        background-color: transparent;
+      }
+    }
   }
 }
 
