@@ -20,18 +20,21 @@
 }
 
 .stats__header {
+  padding: 28px 20px;
   background-color: #ffffff;
   color: #000000;
 }
 
 .stats__slogan {
   margin: 0;
-  margin-bottom: 13px;
-  font-size: 30px;
   font-weight: bold;
+  line-height: 1;
 
-  @media (width <= abs.$tablet-width) {
+  @media (width < abs.$tablet-width) {
+    font-size: 30px;
+    margin-bottom: 13px;
     text-transform: uppercase;
+    text-align: center;
   }
 
 }
@@ -40,6 +43,16 @@
   margin: 0;
   font-size: 20px;
   line-height: 1.35;
+
+  @media (width < abs.$tablet-width) {
+    text-align: center;
+  }
+}
+
+.stats__intro br {
+  @media (width < abs.$tablet-width) {
+    display: none;
+  }
 }
 
 .stats__legend {
