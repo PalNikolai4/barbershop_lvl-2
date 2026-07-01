@@ -90,15 +90,12 @@
 }
 
 .main-nav__wrapper {
-  @media (width >= abs.$tablet-width) {
+  @media (width > abs.$mobile-width) {
     display: flex;
     justify-content: space-between;
-    width: 640px;
+    width: 84%;
+    max-width: 960px;
     margin: 0 auto;
-  }
-
-  @media (width >= abs.$desktop-width) {
-    width: 960px;
   }
 }
 
