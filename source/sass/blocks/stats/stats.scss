@@ -60,7 +60,7 @@
     margin-bottom: 17px;
   }
 
-  @media (width >= abs.$desktop-width) {
+  @media (width >=abs.$desktop-width) {
     margin-bottom: 38px;
   }
 }
@@ -127,13 +127,9 @@
   margin-bottom: 20px;
   background-color: #353535;
 
-  :nth-of-type(1) {
-    background-color: rgb(45 38 130 / 5%);
-  }
-
-  :nth-of-type(2),
-  :nth-of-type(4) {
-    background-color: rgb(255 255 255 / 12%);
+  @media (width > abs.$mobile-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -141,6 +137,24 @@
   display: flex;
   justify-content: space-between;
   padding: 20px;
+
+  &:nth-of-type(1) {
+    background-color: rgb(255 255 255 / 5%);
+  }
+
+  &:nth-of-type(2),
+  &:nth-of-type(4) {
+    background-color: rgb(255 255 255 / 12%);
+  }
+
+  @media (width > abs.$mobile-width) {
+    display: block;
+    padding: 25px 34px 30px;
+
+    &:nth-of-type(4) {
+      background-color: rgb(255 255 255 / 5%);
+    }
+  }
 }
 
 .stats__number {
@@ -152,10 +166,11 @@
   }
 
   @media (width > abs.$mobile-width) {
+    margin-bottom: 12px;
     font-size: 72px;
   }
 
-  @media (width >= abs.$desktop-width) {
+  @media (width >=abs.$desktop-width) {
     line-height: 1.35;
   }
 }
@@ -167,5 +182,18 @@
 
 .stats__text {
   margin: 0;
-  text-align: right;
+
+  @media (width < abs.$tablet-width) {
+    text-align: right;
+  }
+
+  @media (width > abs.$mobile-width) {
+    font-size: 20px;
+  }
+}
+
+.stats__text br {
+  @media (width > abs.$mobile-width) {
+    display: none;
+  }
 }
