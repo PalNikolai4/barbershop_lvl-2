@@ -6,6 +6,10 @@
         </g>
     </symbol>
 
+    <symbol id="triangle" viewBox="0 0 1 1">
+        <polygon points='0,0 1,0 1,1' fill='currentColor'/>
+    </symbol>
+
     <symbol id="logo-mobile" viewBox="0 0 226 30">
         <g>
             <path d="M3.49444 9.66752L0 13.1573L3.49444 16.6471L6.98887 13.1573L3.49444 9.66752Z" fill="white"/>
