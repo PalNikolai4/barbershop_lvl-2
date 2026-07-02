@@ -57,10 +57,7 @@
 
   @media (width > abs.$mobile-width) {
     font-size: 40px;
-    // возможно нужно удалить, так как начинается грид раскладка и
-    // лучше задать grid-row-gap stats__header @media (width > abs.$mobile-width)
-    // чем margin-bottom stats__slogan
-    margin-bottom: 25px;
+    margin-bottom: 17px;
   }
 
   @media (width >= abs.$desktop-width) {
@@ -75,6 +72,12 @@
 
   @media (width < abs.$tablet-width) {
     text-align: center;
+  }
+
+  @media (width > abs.$mobile-width) {
+    padding-top: 4px;
+    padding-left: 34px;
+    text-align: left;
   }
 }
 
