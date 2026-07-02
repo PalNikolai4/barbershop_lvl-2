@@ -23,6 +23,24 @@
   padding: 28px 20px;
   background-color: #ffffff;
   color: #000000;
+
+  @media (width > abs.$mobile-width) {
+    position: relative;
+    padding: 32px 34px 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 42px;
+      left: -23px;
+      width: 23px;
+      height: 23px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%);
+      background-color: #ffffff;
+    }
+  }
 }
 
 .stats__slogan {
@@ -39,6 +57,9 @@
 
   @media (width > abs.$mobile-width) {
     font-size: 40px;
+    // возможно нужно удалить, так как начинается грид раскладка и
+    // лучше задать grid-row-gap stats__header @media (width > abs.$mobile-width)
+    // чем margin-bottom stats__slogan
     margin-bottom: 25px;
   }
 
@@ -143,5 +164,5 @@
 
 .stats__text {
   margin: 0;
-  text-align: end;
+  text-align: right;
 }
