@@ -41,6 +41,13 @@
       background-color: #ffffff;
     }
   }
+
+  @media (width >= abs.$desktop-width) {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content 1fr min-content;
+    align-content: start;
+  }
 }
 
 .stats__slogan {
@@ -78,6 +85,11 @@
     padding-top: 4px;
     padding-left: 34px;
     text-align: left;
+  }
+
+  @media (width >= abs.$desktop-width) {
+    padding-top: 0;
+    padding-left: 0;
   }
 }
 
@@ -130,6 +142,10 @@
   @media (width > abs.$mobile-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (width >= abs.$desktop-width) {
+    margin-bottom: 0;
   }
 }
 
