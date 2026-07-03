@@ -7,14 +7,23 @@
 
 .stats__wrapper {
   @media (width > abs.$mobile-width) {
+    $stats-shift: -203px;
+
+    position: relative;
+    top: $stats-shift;
+    margin-bottom: $stats-shift;
     padding: 0 64px;
   }
 
   @media (width >=abs.$desktop-width) {
+    $stats-shift: -184px;
+
+    top: $stats-shift;
+    margin: auto;
+    margin-bottom: $stats-shift;
+    max-width: 960px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    max-width: 960px;
-    margin: auto;
     padding: 0;
   }
 }
