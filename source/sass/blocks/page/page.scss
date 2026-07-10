@@ -49,8 +49,13 @@
 }
 
 .page__logo-img {
-  width: 226px;
-  height: 85px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (width < abs.$tablet-width) {
+    width: 226px;
+    height: 85px;
+  }
 
   @media (width > abs.$mobile-width) {
     margin-top: 39px;
