@@ -7,12 +7,17 @@
 </head>
 <body class="page__body">
     <header class="page__header">
-        <a class="page__logo">
-          <svg class="logo-mobile page__logo-img" width="226" height="30">
-            <use href="./img/sprite.svg#logo-mobile">
-              <span class="visually-hidden">Логотип барбершопа Бородинский</span>
-            </use>
-          </svg>
+        <a class="page__logo" aria-label="На главную">
+          <span class="visually-hidden">Логотип барбершопа Бородинский</span>
+            <svg class="logo-mobile page__logo-img" width="226" height="30">
+              <use href="./img/sprite.svg#logo-mobile"></use>
+            </svg>
+            <svg class="logo-tablet page__logo-img" width="370" height="100">
+              <use href="./img/sprite.svg#logo-tablet"></use>
+            </svg>
+            <svg class="logo-desktop page__logo-img" width="370" height="153">
+              <use href="./img/sprite.svg#logo-desktop"></use>
+            </svg>
         </a>
         <nav class="main-nav main-nav--closed main-nav--nojs">
             <button class="main-nav__toggle" type="button">
